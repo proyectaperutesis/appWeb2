@@ -22,11 +22,15 @@
             height: 100%;
             vertical-align: middle;
         }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 
 <body class="text-center">
-    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="container-fluid d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
                 <!-- <h3 class="masthead-brand">Proyecta Perú</h3> -->
@@ -55,8 +59,8 @@
                 </div>
             </form>
 
-            <div style="height: 300px; overflow-y: scroll; padding: 10px 0">
-                <div class="card col-md-10 mx-auto" style="margin-bottom: 10px">
+            <div style="height: 300px; overflow-y: scroll; padding: 10px 0;">
+                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3">
@@ -78,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="card col-md-10 mx-auto" style="margin-bottom: 10px">
+                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3">
@@ -100,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="card col-md-10 mx-auto" style="margin-bottom: 10px">
+                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3">
