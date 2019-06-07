@@ -59,6 +59,12 @@
                 </div>
             </form>
 
+            <div class="row" style="padding: 0 10px;">
+                <div class="col-md-4">Categoría</div>
+                <div class="col-md-4">cd</div>
+                <div class="col-md-4">sa</div>
+            </div>
+
             <div style="height: 300px; overflow-y: scroll; padding: 10px 0;">
                 <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
