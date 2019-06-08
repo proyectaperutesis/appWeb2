@@ -38,7 +38,6 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
   
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   
 }
 
@@ -46,6 +45,9 @@ body {
   max-width: 42em;
 }
 
+.shadowText {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
 
 /*
  * Header

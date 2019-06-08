@@ -26,6 +26,8 @@
         ::-webkit-scrollbar {
             display: none;
         }
+
+        
     </style>
 </head>
 
@@ -45,7 +47,8 @@
 
         <main role="main" class="inner cover" style="padding-top: 150px; padding-bottom: 50px">
             <img src="<?php echo base_url(); ?>public/utils/img/logo.png" alt="logo" height="100">
-            <h4 class="cover-heading" style="color: black; font-weight: bold; margin-top: 20px">Plataforma de edición y
+            <h4 class="cover-heading shadowText" style="color: black; font-weight: bold; margin-top: 20px">Plataforma de
+                edición y
                 creación
                 legislativa</h4>
             <p style="color: black">Lee, analiza y contribuye a los proyectos de ley creados por <br>los congresistas y
@@ -92,7 +95,8 @@
                 </div>
                 <div class="col-md-3" style="text-align: end">
                     <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-raised" style="background: #ed161f">Buscar</button>
+                        <button type="submit" class="btn btn-primary btn-raised"
+                            style="background: #ed161f">Buscar</button>
                     </div>
                 </div>
             </div>

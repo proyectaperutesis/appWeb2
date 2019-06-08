@@ -10,7 +10,11 @@ class C_login extends CI_Controller
 
     public function index()
     {
-        $this->load->view('V_login');
+        //1: Congresista 2: Ciudadano
+        $data = array(
+            'tipo_usuario' => 1
+        );
+        $this->load->view('V_login',$data);
     }
 
 }

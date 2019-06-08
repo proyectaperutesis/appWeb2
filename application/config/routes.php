@@ -55,4 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'C_login';
 
+/* ADMINISTRATIVO */
+$route['dashboard'] = 'administrativo/C_dashboard';
+
+
 

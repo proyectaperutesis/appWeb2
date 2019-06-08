@@ -26,7 +26,7 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Correo" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-        <button type="button" class="btn btn-block btn-raised btn-primary mt-4" style="background: #ed161f">Iniciar
+        <button onclick="login()" type="button" class="btn btn-block btn-raised btn-primary mt-4" style="background: #ed161f">Iniciar
             sesión</button>
         <p class="mt-1 mb-3 text-muted"><a href="<?php echo base_url(); ?>"
                 style="text-decoration: none; color: #7a7878">¿No tienes cuenta? Regístrate</a></p>
@@ -34,6 +34,10 @@
         <p class="mt-5 mb-3 text-muted"><a href="<?php echo base_url(); ?>" style="text-decoration: none">Volver a
                 home</a></p>
     </form>
+    <script src="<?php echo base_url(); ?>public/utils/js/login.js"></script>
+    <script>
+        var base_url = <?php echo json_encode(base_url());?>;
+    </script>
 </body>
 
 </html>
