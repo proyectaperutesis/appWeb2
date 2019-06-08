@@ -22,22 +22,23 @@
     <form class="form-signin">
         <img class="mb-4" src="<?php echo base_url(); ?>public/utils/img/logo.png" alt="logo" height="100">
 
-        <label for="inputEmail" class="sr-only">Correo</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Correo" required autofocus>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-        <button onclick="login()" type="button" class="btn btn-block btn-raised btn-primary mt-4" style="background: #ed161f">Iniciar
-            sesión</button>
-        <p class="mt-1 mb-3 text-muted"><a href="<?php echo base_url(); ?>"
-                style="text-decoration: none; color: #7a7878">¿No tienes cuenta? Regístrate</a></p>
-
-        <p class="mt-5 mb-3 text-muted"><a href="<?php echo base_url(); ?>" style="text-decoration: none">Volver a
-                home</a></p>
+        <button onclick="inicioSesion()" type="button" class="btn btn-block btn-raised btn-primary mt-4" style="background: #ed161f">Iniciar sesión</button>
+        <p class="mt-1 mb-3 text-muted"><a href="<?php echo base_url();?>" style="text-decoration: none; color: #7a7878">¿No tienes cuenta? Regístrate</a></p>
+        <p class="mt-5 mb-3 text-muted"><a href="<?php echo base_url();?>" style="text-decoration: none">Volver a home</a></p>
     </form>
-    <script src="<?php echo base_url(); ?>public/utils/js/login.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
     <script>
-        var base_url = <?php echo json_encode(base_url());?>;
+        var base_url = <?php echo json_encode(base_url()); ?>;
     </script>
+    <script src="<?php echo base_url(); ?>public/utils/js/login.js"></script>
 </body>
 
 </html>
