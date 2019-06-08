@@ -28,6 +28,14 @@
         ::-webkit-scrollbar {
             display: none;
         }
+
+        #wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
     </style>
 </head>
 
@@ -67,52 +75,39 @@
 
             <div class="row col-md-8 mx-auto" style="padding-left: 0; padding-right: 0">
                 <div class="col-md-3" style="padding-left: 0;">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info">Categoría</button>
-                        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Categoría</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Ciencia</option>
+                          <option>Medicina</option>
+                        </select>
+                      </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="form-group">
+                    <div class="form-group" style="margin-top: 0">
                         <label class="label-control">Fecha de publicación</label>
-                        <input type="text" class="form-control datepicker">
+                        <input type="text" class="form-control datepicker" style="padding-top: 12px; padding-bottom: 10px">
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Tipo de usuario</button>
-                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" style="text-align: end">
                     <div class="form-group">
+                        <label for="exampleFormControlSelect1">Tipo de persona</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Ciudadano</option>
+                          <option>Congresista</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="col-md-3" >
+                    <div class="form-group" id="wrapper">
+
                         <button type="submit" class="btn btn-primary btn-raised"
-                            style="background: #ed161f">Buscar</button>
+                            style="background: #ed161f; float: right;">Buscar</button>
                     </div>
                 </div>
             </div>
 
-            <div style="height:100%; overflow-y: scroll; padding-top: 30px;">
+            <div style="height:350px; overflow-y: scroll; padding-top: 5px;">
                 <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
@@ -122,6 +117,7 @@
                                     alt="img_categoria" height="80" width="80">
                             </div>
                             <div class="col-md-9">
+                                <p style="text-align: start; color: red; margin-bottom: 0">Cierre de participaciones 13/10/2019</p>
                                 <h5 class="card-title" style="text-align: start;color: black; font-weight: bold">
                                     Proyecto de ley para incentivar IA en las escuelas</h5>
                                 <p class="card-text" style="text-align: justify;float: left; color: black">With

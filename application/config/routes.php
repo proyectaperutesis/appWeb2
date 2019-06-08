@@ -57,6 +57,7 @@ $route['login'] = 'C_login';
 
 /* ADMINISTRATIVO */
 $route['dashboard'] = 'administrativo/C_dashboard';
+$route['crearPL'] = 'administrativo/C_crear_pl';
 
 
 

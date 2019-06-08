@@ -28,9 +28,15 @@
                     Perfil político
                 </a>
                 </li>
+                <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Reportes
+              </a>
+            </li>
             <?php else : ?>
             <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="crearPL">
                     <span data-feather="file-plus"></span>
                     Crear proyecto de ley
                 </a>
@@ -49,12 +55,7 @@
                 </li>
             <?php endif; ?>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                Reportes
-              </a>
-            </li>
+            
           </ul>
 
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
