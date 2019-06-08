@@ -37,13 +37,13 @@
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
                     <a class="nav-link" href="proyectos">Proyectos de Ley</a>
-                    <a class="nav-link" href="whoiam">¿Quienes somos?</a>
+                    <a class="nav-link" href="quienesomos">¿Quienes somos?</a>
                     <a class="nav-link" href="login">Iniciar sesión</a>
                 </nav>
             </div>
         </header>
 
-        <main role="main" class="inner cover">
+        <main role="main" class="inner cover" style="padding-top: 150px; padding-bottom: 50px">
             <img src="<?php echo base_url(); ?>public/utils/img/logo.png" alt="logo" height="100">
             <h4 class="cover-heading" style="color: black; font-weight: bold; margin-top: 20px">Plataforma de edición y
                 creación
@@ -59,13 +59,45 @@
                 </div>
             </form>
 
-            <div class="row" style="padding: 0 10px;">
-                <div class="col-md-4">Categoría</div>
-                <div class="col-md-4">cd</div>
-                <div class="col-md-4">sa</div>
+            <div class="row" style="padding: 0 10px;text-align: start; margin: 0 230px">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button class="btn dropdown-toggle" type="button" id="buttonMenu1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Categoría
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="buttonMenu1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        Fecha
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button class="btn dropdown-toggle" type="button" id="buttonMenu1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Tipo de usuario
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="buttonMenu1">
+                            <a class="dropdown-item" href="#">Ciudadano</a>
+                            <a class="dropdown-item" href="#">Congresista</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="text-align: end">
+                    <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-raised" style="background: #ed161f">Buscar</button>
+                    </div>
+                </div>
             </div>
 
-            <div style="height: 300px; overflow-y: scroll; padding: 10px 0;">
+            <div style="height: 300px; overflow-y: scroll; padding-top: 30px;">
                 <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
