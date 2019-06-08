@@ -25,3 +25,4 @@ ERROR - 2019-06-08 20:05:50 --> Severity: Warning --> mysqli::real_connect(): (H
 ERROR - 2019-06-08 20:05:50 --> Unable to connect to the database
 ERROR - 2019-06-08 20:05:51 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) C:\xampp\htdocs\proyectaPeru\system\database\drivers\mysqli\mysqli_driver.php 203
 ERROR - 2019-06-08 20:05:51 --> Unable to connect to the database
+ERROR - 2019-06-08 21:15:12 --> 404 Page Not Found: /index

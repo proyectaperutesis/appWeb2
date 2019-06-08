@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecta Perú</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 
     <link rel="stylesheet"
@@ -13,9 +14,10 @@
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <link href="<?php echo base_url(); ?>public/utils/css/cover.css" rel="stylesheet">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" href="<?php echo base_url(); ?>public/utils/img/icono.ico">
-
+    <link rel="stylesgeet"
+        href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
     <style>
         .helper {
             display: inline-block;
@@ -26,8 +28,6 @@
         ::-webkit-scrollbar {
             display: none;
         }
-
-        
     </style>
 </head>
 
@@ -54,42 +54,53 @@
             <p style="color: black">Lee, analiza y contribuye a los proyectos de ley creados por <br>los congresistas y
                 ciudadanos. Estos
                 acompañan y pueden adoptar tus ideas.</p>
-            <form>
-                <div class="form-group" style="text-align: start; margin: 0 250px">
-                    <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
-                    <label for="formGroupExampleInput" class="bmd-label-floating">Buscar proyecto de ley</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="form-group" style="text-align: start;">
+                        <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                        <label for="formGroupExampleInput" class="bmd-label-floating">Buscar proyecto de ley</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput">
+                    </div>
                 </div>
-            </form>
+            </div>
 
-            <div class="row" style="padding: 0 10px;text-align: start; margin: 0 230px">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <button class="btn dropdown-toggle" type="button" id="buttonMenu1" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Categoría
+
+            <div class="row col-md-8 mx-auto" style="padding-left: 0; padding-right: 0">
+                <div class="col-md-3" style="padding-left: 0;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info">Categoría</button>
+                        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="buttonMenu1">
+                        <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        Fecha
+                        <label class="label-control">Fecha de publicación</label>
+                        <input type="text" class="form-control datepicker">
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="form-group">
-                        <button class="btn dropdown-toggle" type="button" id="buttonMenu1" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Tipo de usuario
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Tipo de usuario</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="buttonMenu1">
-                            <a class="dropdown-item" href="#">Ciudadano</a>
-                            <a class="dropdown-item" href="#">Congresista</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +112,7 @@
                 </div>
             </div>
 
-            <div style="height: 300px; overflow-y: scroll; padding-top: 30px;">
+            <div style="height:100%; overflow-y: scroll; padding-top: 30px;">
                 <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
                     <div class="card-body">
                         <div class="row">
@@ -199,6 +210,12 @@
         integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
         crossorigin="anonymous"></script>
     <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script
+        src="https://rawgit.com/creativetimofficial/material-kit/master/assets/js/plugins/bootstrap-datetimepicker.js"></script>
+    <script src="https://rawgit.com/creativetimofficial/material-kit/master/assets/js/material-kit.js"></script>
+    <script src="<?php echo base_url(); ?>public/utils/js/cover.js"></script>
+
 </body>
 
 </html>
