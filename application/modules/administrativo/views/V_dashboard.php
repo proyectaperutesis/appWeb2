@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Proyecta Perú</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
   <link rel="stylesheet"
     href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
@@ -15,7 +16,12 @@
   <link href="<?php echo base_url(); ?>public/administrativo/css/dashboard.css" rel="stylesheet">
 
   <link rel="icon" href="<?php echo base_url(); ?>public/utils/img/icono.ico">
+  <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+        }
 
+    </style>
 </head>
 
 <body>
