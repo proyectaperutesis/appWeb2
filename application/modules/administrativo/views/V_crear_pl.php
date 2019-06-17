@@ -61,16 +61,17 @@
                             style="color: blue; float: left;" data-feather="alert-circle"></span></button>
                 </div>
                 <h5>Fundamentos de la ley</h5>
+                <div id="scrolling-wrapper"></div>
                 <div class="row">
                     <div class="col-md-11">
                         <div class="form-group">
                             <label for="exampleTextarea" class="bmd-label-floating">Ingrese fundamento</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            <textarea class="form-control" id="txtFundamento" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="col-md-1" style="text-align: center;">
                         <span class="btn-group-sm">
-                            <button type="button" class="btn btn-primary bmd-btn-fab" style="margin-top: 40px">
+                            <button type="button" class="btn btn-primary bmd-btn-fab" style="margin-top: 40px" onclick="addFundamentoLey()">
                                 <i class="material-icons">add</i>
                             </button>
                         </span>
@@ -158,6 +159,7 @@
         crossorigin="anonymous"></script>
     <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
     <script src="https://rawgit.com/creativetimofficial/material-kit/master/assets/js/material-kit.js"></script>
+    <script src="<?php echo base_url(); ?>public/administrativo/js/crear_pl_ciudadano.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
