@@ -49,8 +49,8 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1" class="bmd-label-floating">Título del proyecto de ley</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
-                    <span class="bmd-help">We'll never share your email with anyone else.</span>
+                    <input class="form-control" id="exampleInputEmail1">
+                    <span class="bmd-help"><i>El mundo de..., Yo soy Estrella de ...</i></span>
                 </div>
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 mt-5 border-bottom">
@@ -61,7 +61,7 @@
                             style="color: blue; float: left;" data-feather="alert-circle"></span></button>
                 </div>
                 <h5>Fundamentos de la ley</h5>
-                <div id="scrolling-wrapper"></div>
+                <div id="scrolling-wrapper" style="padding: 5px"></div>
                 <div class="row">
                     <div class="col-md-11">
                         <div class="form-group">
@@ -77,6 +77,11 @@
                         </span>
                     </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input class="form-control" id="inputOculto" disabled>                    
+                    </div>
                 </div>
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 mt-5 border-bottom">
@@ -110,28 +115,37 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 mt-5 border-bottom">
                     <h1 class="h4" style="font-weight: bold">Fórmula legal</h1>
+
                     <button tabindex="0" type="button" class="btn btn-secondary" data-toggle="popover"
                         data-trigger="focus" title="Fórmula legal"
                         data-content="Es una metodología que se usa para evaluar los costos
                         y beneficios, con la finalidad de conocer los efectos futuros de la ley.<br> Ver ejemplo <a href='www.google.com'>acá</a>"><span
                             style="color: blue; float: left;" data-feather="alert-circle"></span></button>
                 </div>
+                <div id="scrolling-wrapper2" style="padding: 5px"></div>
+
                 <div class="row">
                     <div class="col-md-11">
                         <div class="form-group">
                             <label for="exampleTextarea" class="bmd-label-floating">Ingrese artículos</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            <textarea class="form-control" id="txtArticulo" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="col-md-1" style="text-align: center;">
                         <span class="btn-group-sm">
-                            <button type="button" class="btn btn-primary bmd-btn-fab" style="margin-top: 40px">
+                            <button type="button" class="btn btn-primary bmd-btn-fab" style="margin-top: 40px" onclick="addArticulos()">
                                 <i class="material-icons">add</i>
                             </button>
                         </span>
                     </div>
 
                 </div>
+
+                <div class="row">
+                        <div class="col-md-12">
+                            <input class="form-control" id="inputOcultoArticulos" disabled>                    
+                        </div>
+                    </div>
 
 
                 <div class="row" style="padding: 25px 0; float: right">
@@ -159,18 +173,20 @@
         crossorigin="anonymous"></script>
     <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
     <script src="https://rawgit.com/creativetimofficial/material-kit/master/assets/js/material-kit.js"></script>
-    <script src="<?php echo base_url(); ?>public/administrativo/js/crear_pl_ciudadano.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script src="<?php echo base_url(); ?>public/administrativo/js/crear_pl_ciudadano.js"></script>
+
     <script>
-        feather.replace();
+        
         $('.popover-dismiss').popover({
             trigger: 'focus'
         });
         $("[data-toggle=popover]")
             .popover({ html: true })
     </script>
+
 
 
 </body>
