@@ -1,6 +1,6 @@
 function inicioSesion() {
-    var usuario = 'abel.tarazona';
-    var password = '123';
+    var usuario = $('#inputEmail').val();
+    var password = $('#inputPassword').val();
     $.ajax({
         url: "C_login/login",
         method: "POST",

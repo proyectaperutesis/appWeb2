@@ -8,7 +8,7 @@
               </a>
             </li>
 
-            <?php if($this->session->userdata('usuario_id') == 1) : ?>
+            <?php if($this->session->userdata('id_rol') == 3) : ?>
               
             <li class="nav-item">
                   <a class="nav-link" href="#">
@@ -42,7 +42,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="proyectosley">
                     <span data-feather="file"></span>
                     Proyectos de ley
                 </a>
@@ -57,7 +57,7 @@
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="perfil">
                 <span data-feather="user"></span>
                 Perfil
               </a>

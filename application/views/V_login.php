@@ -29,7 +29,7 @@
         <img class="mb-4" src="<?php echo base_url(); ?>public/utils/img/logo.png" alt="logo" height="100">
 
         <label for="inputEmail" class="sr-only">Usuario</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+        <input id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
         <button onclick="inicioSesion()" type="button" class="btn btn-block btn-raised btn-primary mt-4" style="background: #ed161f">Iniciar sesión</button>

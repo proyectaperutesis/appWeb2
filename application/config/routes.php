@@ -54,10 +54,13 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'C_login';
+$route['proyectoley'] = 'C_perfil_pl';
 
 /* ADMINISTRATIVO */
 $route['dashboard'] = 'administrativo/C_dashboard';
 $route['crearPL'] = 'administrativo/C_crear_pl';
+$route['perfil'] = 'administrativo/C_perfil';
+$route['proyectosley'] = 'administrativo/C_proyectos_ley';
 
 
 

@@ -1,19 +1,22 @@
 var fundamentos = [];
 var articulos = [];
-
+var cont = 0;
 //Articulos
 
 function addArticulos() {
     var articulo = $('#txtArticulo').val();
 
-    articulos.push(articulo);
+    //Creando objeto JSON
+    var element = {};
+    element.article = articulo;
+    articulos.push(element);
+    
     cargarArticulos();
     $('#txtArticulo').val('');
 }
 
 function cargarArticulos() {
     var html = "";
-    var toBD = "";
 
     if(articulos.length >= 5) { $("#scrolling-wrapper2").css({"overflow-y":"scroll","height":"200px"}); }
     else {$("#scrolling-wrapper2").css({"overflow-y":"","height":""});}
@@ -23,7 +26,7 @@ function cargarArticulos() {
         `<div class='card' style='padding: 10px'>
             <div class='row'>
                 <div class='col-md-9'>
-                <b>Articulo `+(i+1)+`</b>: `+articulos[i]+`
+                <b>Articulo `+(i+1)+`</b>: `+articulos[i].article+`
                 </div>    
                 <div class='col-md-3' style='text-align: end;'>
                 
@@ -37,10 +40,11 @@ function cargarArticulos() {
             </div>    
         </div>`;
         html += "<br>";
-        toBD += articulos[i] + ";";
+        //toBD += articulos[i].article;
     }
     $("#scrolling-wrapper2").html(html);
-    $("#inputOcultoArticulos").val(toBD);
+    var salida = JSON.stringify(articulos);
+    $("#inputOcultoArticulos").val(salida);
     feather.replace();
 }
 
@@ -55,15 +59,17 @@ function removerArticulo(i){
 function addFundamentoLey() {
 
     var fundamento = $('#txtFundamento').val();
+    //Creando objeto JSON
+    var element = {};
+    element.fundament = fundamento;
+    fundamentos.push(element);
 
-    fundamentos.push(fundamento);
     cargarFundamentos();
     $('#txtFundamento').val('');
 }
 
 function cargarFundamentos() {
     var html = "";
-    var toBD = "";
 
     if(fundamentos.length >= 5) { $("#scrolling-wrapper").css({"overflow-y":"scroll","height":"200px"}); }
     else {$("#scrolling-wrapper").css({"overflow-y":"","height":""});}
@@ -73,7 +79,7 @@ function cargarFundamentos() {
         `<div class='card' style='padding: 10px'>
             <div class='row'>
                 <div class='col-md-11'>
-                Que, `+fundamentos[i]+`
+                Que, `+fundamentos[i].fundament+`
                 </div>    
                 <div class='col-md-1' style='text-align: center' onclick='removerFundamento(`+i+`)'>
                 <span data-feather="x-circle" style='color: red'></span>
@@ -81,14 +87,55 @@ function cargarFundamentos() {
             </div>    
         </div>`;
         html += "<br>";
-        toBD += fundamentos[i] + ";";
     }
+    var salida = JSON.stringify(fundamentos);
     $("#scrolling-wrapper").html(html);
-    $("#inputOculto").val(toBD);
+    $("#inputOculto").val(salida);
     feather.replace();
 }
 
 function removerFundamento(i){
     fundamentos.splice(i, 1);
     cargarFundamentos();
+}
+
+
+//Registro
+function registrarPL() {
+    var titulo = $('#txtTitulo').val();
+    var fundamento = JSON.stringify(fundamentos);
+    var vigencia = $('#txtVigencia').val();
+    var costo = $('#txtCosto').val();
+    var formulalegal = JSON.stringify(articulos);
+    var categoria = $('#selectCategoria').val();
+
+    if (!validate_pl(titulo, fundamento, vigencia, costo, formulalegal, categoria)) { return; }
+
+    $.ajax({
+        url: 'administrativo/C_crear_pl/registrarPL',
+        data: {
+            titulo, fundamento, vigencia, costo, formulalegal, categoria
+        },
+        type: 'POST'
+    }).done(function (response) {
+        let data = JSON.parse(response);
+        if(data.error == 0) {
+            alert('¡Registro exitoso!');
+            location.reload();
+        }
+        //console.log(data.html);
+    }).fail(function () {
+        alert("error");
+    });
+}
+
+function validate_pl(titulo, fundamento, vigencia, costo, formulalegal, categoria) {
+    if (titulo == '') { alert('Debe ingresar un título'); return; }
+    if (fundamento == '') { alert('Debe ingresar al menos un fundamento'); return; }
+    if (vigencia == '') { alert('Debe ingresar vigencia'); return; }
+    if (costo == '') { alert('Debe ingresar el costo - beneficio'); return; }
+    if (formulalegal == '') { alert('Debe ingresar la fórmula legal'); return; }
+    if (categoria == '') { alert('Debe seleccionar una categoría'); return; }
+
+    return true;
 }

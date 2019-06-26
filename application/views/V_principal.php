@@ -46,17 +46,7 @@
 
 <body class="text-center">
     <div class="container-fluid d-flex h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <!-- <h3 class="masthead-brand">Proyecta Perú</h3> -->
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
-                    <a class="nav-link" href="proyectos">Proyectos de Ley</a>
-                    <a class="nav-link" href="quienesomos">¿Quienes somos?</a>
-                    <a class="nav-link" href="login">Iniciar sesión</a>
-                </nav>
-            </div>
-        </header>
+        <?php include 'header.php';?>
 
         <main role="main" class="inner cover" style="padding-top: 150px; padding-bottom: 50px">
             <img src="<?php echo base_url(); ?>public/utils/img/logo.png" alt="logo" height="100">
@@ -72,7 +62,7 @@
                     <div class="form-group" style="text-align: start;">
                         <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
                         <label for="formGroupExampleInput" class="bmd-label-floating">Buscar proyecto de ley</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput">
+                        <input type="text" class="form-control" id="txtTitulo">
                     </div>
                 </div>
             </div>
@@ -82,105 +72,37 @@
                 <div class="col-md-3" style="padding-left: 0;">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Categoría</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option>Ciencia</option>
-                          <option>Medicina</option>
+                        <select class="form-control" id="selectCategoria">
+                            <option value="" selected>Seleccione</option>
+                            <?php echo $select_categoria?>
                         </select>
                       </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group" style="margin-top: 0">
                         <label class="label-control">Fecha de publicación</label>
-                        <input type="text" class="form-control datepicker" style="padding-top: 12px; padding-bottom: 10px">
+                        <input id="txtFecha" type="text" class="form-control datepicker" style="padding-top: 12px; padding-bottom: 10px">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Tipo de persona</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option>Ciudadano</option>
-                          <option>Congresista</option>
+                        <select class="form-control" id="selectTipo">
+                          <option value="" selected>Seleccione</option>
+                          <?php echo $select_roles?>
                         </select>
                       </div>
                 </div>
                 <div class="col-md-3" >
                     <div class="form-group" id="wrapper">
 
-                        <button type="submit" class="btn btn-primary btn-raised"
+                        <button type="submit" class="btn btn-primary btn-raised" onclick="buscarProyectosLey()"
                             style="background: #ed161f; float: right;">Buscar</button>
                     </div>
                 </div>
             </div>
 
-            <div style="height:350px; overflow-y: scroll; padding-top: 5px;">
-                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <span class="helper"></span>
-                                <img src="<?php echo base_url(); ?>public/utils/img/categorias/science.png"
-                                    alt="img_categoria" height="80" width="80">
-                            </div>
-                            <div class="col-md-9">
-                                <p style="text-align: start; color: red; margin-bottom: 0">Cierre de participaciones 13/10/2019</p>
-                                <h5 class="card-title" style="text-align: start;color: black; font-weight: bold">
-                                    Proyecto de ley para incentivar IA en las escuelas</h5>
-                                <p class="card-text" style="text-align: justify;float: left; color: black">With
-                                    supporting text below as a
-                                    natural lead-in to additional content supporting text below as a natural lead-in to
-                                    additional content supporting text below as a natural lead-in to additional content
-                                    supporting text below as a natural lead-in to additional content.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <span class="helper"></span>
-                                <img src="<?php echo base_url(); ?>public/utils/img/categorias/science.png"
-                                    alt="img_categoria" height="80" width="80">
-                            </div>
-                            <div class="col-md-9">
-                                <h5 class="card-title" style="text-align: start;color: black; font-weight: bold">
-                                    Proyecto de ley para incentivar IA en las escuelas</h5>
-                                <p class="card-text" style="text-align: justify;float: left; color: black">With
-                                    supporting text below as a
-                                    natural lead-in to additional content supporting text below as a natural lead-in to
-                                    additional content supporting text below as a natural lead-in to additional content
-                                    supporting text below as a natural lead-in to additional content.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card col-md-8 mx-auto" style="margin-bottom: 10px">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <span class="helper"></span>
-                                <img src="<?php echo base_url(); ?>public/utils/img/categorias/science.png"
-                                    alt="img_categoria" height="80" width="80">
-                            </div>
-                            <div class="col-md-9">
-                                <h5 class="card-title" style="text-align: start;color: black; font-weight: bold">
-                                    Proyecto de ley para incentivar IA en las escuelas</h5>
-                                <p class="card-text" style="text-align: justify;float: left; color: black">With
-                                    supporting text below as a
-                                    natural lead-in to additional content supporting text below as a natural lead-in to
-                                    additional content supporting text below as a natural lead-in to additional content
-                                    supporting text below as a natural lead-in to additional content.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+            <div id="divContainerPLs" style="height:350px; overflow-y: scroll; padding-top: 5px;">
             </div>
 
         </main>
@@ -200,7 +122,7 @@
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

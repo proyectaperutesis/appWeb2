@@ -9,17 +9,20 @@ class M_login extends CI_Model
 
     function login($datos_login) {
 
-        //$sql = 'SELECT * FROM "MDB_SEG"."SEG_LOGIN_INTRANET"(?,?) ';
+        $sql = 'SELECT * FROM "Seguridad"."fn_seg_login"(?,?) ';
 
-        //$resultado = $this->db->query($sql,$datos_login);
-        $resultado = 1;
-        //if($resultado->num_rows() == 1)
-        if($resultado == 1)
+        $resultado = $this->db->query($sql,$datos_login);
+        
+        if($resultado->num_rows() == 1)
         {   
-            //$r = $resultado->row();
+            $r = $resultado->row();
 
             $usuario_session = array( //1 congresista 2 ciudadano
-                'usuario_id' => 2
+                'id_usuario' => $r->id_usuario,
+                'nombre_persona' => $r->nombre_persona,
+                'apellido_paterno' => $r->apellido_paterno,
+                'apellido_materno' => $r->apellido_materno,
+                'id_rol' => $r->id_rol,
             );
 
             $this->session->set_userdata($usuario_session);
@@ -28,7 +31,6 @@ class M_login extends CI_Model
 
         } else { return array('error'=> EXIT_ERROR);}
     }
-
 
 
 
