@@ -39,19 +39,19 @@
           <h1 class="h2">Dashboard</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
-              <button class="btn btn-sm btn-outline-secondary">Share</button>
-              <button class="btn btn-sm btn-outline-secondary">Export</button>
+              <button class="btn btn-sm btn-outline-secondary">Compartir</button>
+              <button class="btn btn-sm btn-outline-secondary">Exportar</button>
             </div>
             <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
               <span data-feather="calendar"></span>
-              This week
+              Este mes
             </button>
           </div>
         </div>
 
         <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
-        <h2>Section title</h2>
+        <h2>Seguimiento de Proyectos de ley</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>
@@ -210,7 +210,7 @@
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"],
         datasets: [{
           data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
           lineTension: 0,

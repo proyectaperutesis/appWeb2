@@ -14,6 +14,20 @@ function getCategorias()
     return $html;
 }
 
+function getParametros($categoria)
+{
+    $ci = &get_instance();
+
+    $ci->load->model('M_utils');
+    $data = $ci->M_utils->getParametros($categoria);
+    $html = "";
+    foreach ($data['result'] as $datos) {
+        $html .= "<option value=" . $datos->idparametro . ">" . $datos->parametro_salida . "</option>";
+    }
+
+    return $html;
+}
+
 function getTipoPersona()
 {
     $ci = &get_instance();

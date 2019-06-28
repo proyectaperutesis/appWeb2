@@ -23,6 +23,7 @@ class M_login extends CI_Model
                 'apellido_paterno' => $r->apellido_paterno,
                 'apellido_materno' => $r->apellido_materno,
                 'id_rol' => $r->id_rol,
+                'nombre_usuario' => $r->nombre_usuario,
             );
 
             $this->session->set_userdata($usuario_session);

@@ -51,7 +51,7 @@ class C_principal extends MX_Controller
                         <div class='row'>
                             <div class='col-md-3'>
                                 <span class='helper'></span>
-                                <img src='".base_url()."public/utils/img/categorias/science.png'
+                                <img src='".base_url()."public/utils/img/categorias/".$dat->imagen."'
                                     alt='img_categoria' height='80' width='80'>
                             </div>
                             <div class='col-md-9'>
