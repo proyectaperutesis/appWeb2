@@ -146,6 +146,9 @@
     
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+    feather.replace()
+  </script>
     <script src="<?php echo base_url(); ?>public/administrativo/js/proyectos_ley.js"></script>
     <script>
 

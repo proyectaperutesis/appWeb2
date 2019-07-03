@@ -36,8 +36,17 @@ class C_perfil_pl extends MX_Controller
         } else {
             $data = $this->M_utils->asignarVotacionProyectoLey($usuario,$id,$voto);
             echo json_encode($data);    
-        }
+        } 
+    }
 
-            
+    function checkIfUserIsLogged() {
+        $usuario = $this->session->userdata('id_usuario');
+        if(empty($usuario)) {
+            $data['error'] = 5;
+            echo json_encode($data);
+        } else {
+            $data['error'] = 1;
+            echo json_encode($data);
+        }
     }
 }
